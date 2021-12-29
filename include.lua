@@ -23,6 +23,8 @@ local function registerEnum(name, elements)
   rawset(_G, name, generatedEnum)
 end
 
+local unpack = unpack or table.unpack
+
 function enum(name)
   assert(type(name) == "string", "Expected [string] name for enum constructor, got " .. type(name))
 
